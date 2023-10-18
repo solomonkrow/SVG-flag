@@ -21,6 +21,8 @@ Need to have node.js
 
 Open index.js in your code editor, open file in intergrated termianl, type 'node index.js' and hit enter, fill out prompts and check /examples for logo
 
+https://drive.google.com/file/d/1ALWu1aqCQ6vQsrFRl6_4dVmJuPlAsudG/view?usp=sharing
+
 ## Credits
 
 Juan Santiago
