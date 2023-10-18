@@ -1,7 +1,7 @@
-const Circle = require('./lib/circle.js');
-const Square = require('./lib/square.js');
+const Circle = require('./lib/Circle.js');
+const Square = require('./lib/Square.js');
 const Triangle = require('./lib/Triangle.js');
-
+const Star = require('./lib/Star.js')
 
 const inquirer = require('inquirer');
 const fs = require('fs');
@@ -24,7 +24,7 @@ const promptUser = () => {
             type: 'list',
             name: 'shape',
             message: 'Select a shape',
-            choices: ['circle', 'triangle', 'square'],
+            choices: ['circle', 'triangle', 'square', 'star'],
             validate: (value) => value ? true : 'Input value required',
         },
         {
@@ -63,6 +63,9 @@ function init() {
             } else if (data.shape === 'triangle') {
                 let circle = new Triangle(data.abbrv, data.abbrvColor, data.shapeColor, data.flagColor);
                 generatedSVG = circle.generateTriangle();
+            } else if (data.shape === 'star') {
+                let circle = new Star(data.abbrv, data.abbrvColor, data.shapeColor, data.flagColor);
+                generatedSVG = circle.generateStar();
             }
 
             createLogo('./examples/logo',(generatedSVG))
