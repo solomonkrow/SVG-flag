@@ -45,7 +45,7 @@ const promptUser = () => {
 function createLogo(logo, data) {
     fs.writeFile(`${logo.split(' ').join('')}.svg`, data, (err) => {
         if(err){console.log(err);}
-        console.log('Flag Generated');
+        console.log('Logo Generated');
     })
 };
 
@@ -65,7 +65,7 @@ function init() {
                 generatedSVG = circle.generateTriangle();
             }
 
-            createLogo('./examples/flag',(generatedSVG))
+            createLogo('./examples/logo',(generatedSVG))
         })
         .then(() => console.log('Successfully wrote to examples folder'))
         .catch((err) => console.error(err));
